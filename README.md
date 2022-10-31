@@ -1,5 +1,6 @@
 # magneticMPM
 ## A Framework for Simulation of Magnetic Soft Robots using the Material Point Method (Under Review)
+Paper is currently under review but can be made avaliable on request.
 
 Magnetic
 soft robots are formed of silicone polymers embedded with
