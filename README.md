@@ -20,13 +20,21 @@ magneticMPM is built with the [Taichi](https://www.taichi-lang.org/) programming
 
 
 ## Magnetic Beam Bending
-![](https://github.com/joshDavy1/magneticMPM/blob/main/images/figure.PNG)
+![](https://github.com/joshDavy1/magneticMPM/blob/main/images/beam_bending.gif)
 
 
+<img src="https://github.com/joshDavy1/magneticMPM/blob/main/images/figure.PNG" width="800" height="350">
 
 ## Magnetic Continuum Robot  (Pittiglio et al.)
 
+![](https://github.com/joshDavy1/magneticMPM/blob/main/images/tentacle.gif)
+![](https://github.com/joshDavy1/magneticMPM/blob/main/images/tentacle2.gif)
+
 ## Small Scale Soft Robot (Hu et al.)
 
+![](https://github.com/joshDavy1/magneticMPM/blob/main/images/sittiWorm.gif)
+
 ## Six armed gripper (Xu et al.)
+
+![](https://github.com/joshDavy1/magneticMPM/blob/main/images/gripper.gif)
 
