@@ -1,6 +1,8 @@
 # magneticMPM
 ## A Framework for Simulation of Magnetic Soft Robots using the Material Point Method (Under Review)
 Paper is currently under review but can be made avaliable on request.
+### Joshua Davy, Peter Lloyd, James H. Chandler and Pietro Valdastri
+
 
 Magnetic
 soft robots are formed of silicone polymers embedded with
@@ -18,6 +20,7 @@ magneticMPM is built with the [Taichi](https://www.taichi-lang.org/) programming
 
 
 ## Magnetic Beam Bending
+![](https://github.com/joshDavy1/magneticMPM/blob/main/images/figure.PNG)
 
 
 
