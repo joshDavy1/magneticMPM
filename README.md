@@ -39,15 +39,20 @@ magneticMPM is built with the [Taichi](https://www.taichi-lang.org/) programming
 ![](https://github.com/joshDavy1/magneticMPM/blob/main/images/gripper.gif)
 
 # Install
-magneticMPM has been tested with Python 3.8 and Taichi 1.1.2. Anaconda is highly recommended.
+magneticMPM has been tested with Python 3.8 and Taichi 1.1.2. [Anaconda](https://www.anaconda.com/) is highly recommended.
 
+Create Environment
 `conda create --name py38 python=3.8`
 `conda activate py38`
 
+Install Dependencies
 `pip install taichi==1.1.2 numpy trimesh pyyaml`
 
-
-
+Run
+`python beam_bending\main.py`
+`python runGripper.py`
+`python runTentacle.py`
+`python runSmallScaleBot.py`
 
 
 
