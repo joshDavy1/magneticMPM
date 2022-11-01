@@ -3,8 +3,9 @@ ti.init(arch=ti.cuda, default_fp=ti.f32)
 import numpy as np
 from sim import mpm
 from sim.loadRobot import Robot
+from colour_palette import generic_palette
 
-robotFile = "DillerBot/DillerBot.yaml"
+robotFile = "Gripper/gripper.yaml"
 print("Generating Particles....")
 r = Robot(robotFile, ppm3=1e14, scale=1e-3)
 
@@ -16,8 +17,8 @@ gamma = 2e1 # Damping Constant
 offset = np.array([grid_size/4, grid_size/4, 0.6e-3]) #Make sure robot is within grid
 dt = 7e-7
 # Initialise Variables
-print("Initialising Variables...")
-mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset)
+print("Initialising Variables... (This may take a while)")
+mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset, colour_palette=generic_palette)
 # Visualisation
 window = ti.ui.Window("Window", (1024, 1024))
 canvas = window.get_canvas()

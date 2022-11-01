@@ -1,19 +1,21 @@
 import numpy as np
 import taichi as ti
-from sim.colour_palette import palette
+
 
 inv_mu0 = 1/(4*np.pi*1e-7) #1/(H/m)
 p_vol = 1
 
-def init(robot, scale=1, grid_size_=100e-3, dx_=1e-3, g_=np.array([0, 0, -9.81]), gamma_=20, offset=np.array([0, 0, 0])):
+
+def init(robot, scale=1, grid_size_=100e-3, dx_=1e-3, g_=np.array([0, 0, -9.81]), gamma_=20, offset=np.array([0, 0, 0]), colour_palette=None):
     global x, v, C, F, n_particles, mag, x_visualise, \
         grid_size, dx, g, gamma, n_grid, inv_dx, grid_v, grid_m, applied_field, \
-        particle_type, grid_static, fixed_particles, colors, particle_mass, bulk_modulus
+        particle_type, grid_static, fixed_particles, colors, particle_mass, bulk_modulus, palette
     
     grid_size = grid_size_
     dx = dx_
     g = ti.Vector(g_)
     gamma = gamma_
+    palette = colour_palette
 
     X = np.concatenate(robot.particles, axis=0, dtype=np.float32)
     n_particles = X.shape[0]

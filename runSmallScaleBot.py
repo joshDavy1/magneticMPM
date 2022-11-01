@@ -3,6 +3,7 @@ ti.init(arch=ti.cuda, default_fp=ti.f32)
 import numpy as np
 from sim import mpm
 from sim.loadRobot import Robot
+from colour_palette import generic_palette
 
 robotFile = "SmallScaleBot/SmallScaleBot.yaml"
 print("Generating Particles....")
@@ -17,7 +18,7 @@ offset = np.array([3e-3, 3e-3, 0.2e-3]) #Make sure robot is within grid
 dt = 7e-7
 # Initialise Variables
 print("Initialising Variables... (this may take a while)")
-mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset)
+mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset, colour_palette=generic_palette)
 # Visualisation
 window = ti.ui.Window("Window", (1024, 1024))
 canvas = window.get_canvas()
@@ -39,7 +40,6 @@ frq = 1
 
 timesteps = 0
 renderEvery = 20
-
 
 gui = window.get_gui()
 while window.running:
@@ -69,7 +69,6 @@ while window.running:
         field[2] = field_vector[1]
         mpm.setField(field * 1e-3)
         with gui.sub_window("Field", 0.05, 0.7, 0.3, 0.1) as w:
-            #magnitude = w.slider_float("Magnitude (mT)", magnitude, -20, 20)
             w.text(str(field))
             w.text(str(np.rad2deg(theta)))
         with gui.sub_window("Particle Size", 0.05, 0.9, 0.25, 0.055) as w:

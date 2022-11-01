@@ -4,6 +4,7 @@ import numpy as np
 from sim.loadRobot import Robot
 ti.init(arch=ti.cuda, default_fp=ti.f32)
 from sim import mpm
+from colour_palette import tentacle_palette
 
 robotFile = "Tentacle/tentacleA.yaml"
 print("Generating Particles....")
@@ -16,7 +17,7 @@ gamma = 200 # Damping Constant
 offset = np.array([grid_size/2, grid_size/2, 30e-3])
 
 print("Initialising Variables.... (This may take a while)")
-mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset)
+mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset, colour_palette=tentacle_palette)
 
 
 window = ti.ui.Window("Window", (1024, 1024))
@@ -46,20 +47,6 @@ while window.running:
     scene.particles(mpm.x_visualise,
                     radius=p_size,
                     per_vertex_color=mpm.colors)
-    # # Draw Magnetisation Vector
-    # idx = mpm.n_particles - 20
-    # pos = mpm.x[idx] * 1e3
-    # F = mpm.F[idx]
-    # J = np.linalg.det(F.to_numpy())
-    # rot_m = (1/J)*F@(mpm.mag[idx]/mpm.mag[idx].norm())
-    # direction =  rot_m * 10 +  pos
-    # vertices[0][0] = pos[0]
-    # vertices[0][1] = pos[2]
-    # vertices[0][2] = pos[1]
-    # vertices[1][0] = direction[0]
-    # vertices[1][1] = direction[2]
-    # vertices[1][2] = direction[1]
-    # scene.lines(vertices, width=10.0, color=(1.0, 0, 0))
     #########################
     canvas.scene(scene)
     with gui.sub_window("Field", 0.05, 0.8, 0.2, 0.1) as w:
