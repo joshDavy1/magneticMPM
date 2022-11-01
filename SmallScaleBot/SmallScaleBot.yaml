@@ -1,0 +1,49 @@
+name: SmallScaleBot
+n_segments: 9
+remenance: 0.0778
+segments:
+- mesh: "robot - segment-1.STL"    #0
+  magnetisation_vector: [0, 0.707, 0.707]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-2.STL" #1
+  magnetisation_vector: [0, 0, 1]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-3.STL" #2
+  magnetisation_vector: [0, -0.707, 0.707]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-4.STL" #3
+  magnetisation_vector: [0, -1, 0]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-5.STL" #4
+  magnetisation_vector: [0, -0.707, -0.707]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-6.STL" #5
+  magnetisation_vector: [0, 0, -1]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-7.STL" #6
+  magnetisation_vector: [0, 0.707, -0.707]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-8.STL" #7
+  magnetisation_vector:  [0, 1, 0]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False
+- mesh: "robot - segment-9.STL" #8
+  magnetisation_vector:  [0, 0.707, 0.707]
+  density: 1860
+  bulk_modulus: 28166
+  fixed: False

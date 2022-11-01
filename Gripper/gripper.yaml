@@ -1,0 +1,69 @@
+name: Gripper
+n_segments: 13
+remenance: 0.0301
+segments:
+- mesh: "DillerBot - Boss-Extrude1-1.STL"    #0
+  magnetisation_vector: [0, 0, 1]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude3[1]-1.STL" #1
+  magnetisation_vector: [-0.43, 0.25, -0.86]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude3[2]-1.STL" #2
+  magnetisation_vector: [-0.43, -0.25, -0.86]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude3[3]-1.STL" #3
+  magnetisation_vector: [0, -0.5, -0.86]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude3[4]-1.STL" #4
+  magnetisation_vector: [0.43, -0.25, -0.86]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude3[5]-1.STL" #5
+  magnetisation_vector: [0.43, 0.25, -0.86]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude3[6]-1.STL" #6
+  magnetisation_vector: [0, 0.5, -0.86]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude4[1]-1.STL" #7
+  magnetisation_vector: [-0.14, 0.08, -0.98]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude4[2]-1.STL" #8
+  magnetisation_vector: [0, 0.17, -0.98]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude4[3]-1.STL" #9
+  magnetisation_vector: [0.14, 0.08, -0.98]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude4[4]-1.STL" #10
+  magnetisation_vector: [0.14, -0.08, -0.98]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude4[5]-1.STL" #11
+  magnetisation_vector: [0, -0.17, -0.98]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
+- mesh: "DillerBot - Boss-Extrude4[6]-1.STL" #12
+  magnetisation_vector: [-0.14, -0.08, -0.98]
+  density: 1500
+  bulk_modulus: 110000
+  fixed: False
