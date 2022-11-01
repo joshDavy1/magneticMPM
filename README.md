@@ -46,7 +46,7 @@ Create Environment
 `conda activate py38`
 
 Install Dependencies
-`pip install taichi==1.1.2 numpy trimesh pyyaml`
+`pip install taichi==1.1.2 numpy trimesh pyyaml matplotlib rtree`
 
 Run
 `python beam_bending\main.py`
