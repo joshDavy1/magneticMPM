@@ -44,7 +44,7 @@ magneticMPM has been tested with Python 3.8 and Taichi 1.1.2. Anaconda is highly
 `conda create --name py38 python=3.8`
 `conda activate py38`
 
-`pip install taichi==1.1.2 numpy trimesh`
+`pip install taichi==1.1.2 numpy trimesh pyyaml`
 
 
 
