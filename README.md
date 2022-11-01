@@ -16,7 +16,7 @@ torques)
 
 We aim to contribute an easy to use simulator for magnetic soft robots capable of modelling dynamic behaviour using the Material Point Method. 
 
-magneticMPM is built with the [Taichi](https://www.taichi-lang.org/) programming language.
+magneticMPM is built with the [Taichi](https://www.taichi-lang.org/) programming language. Install instructions at bottom of README.
 
 
 ## Magnetic Beam Bending
@@ -37,4 +37,18 @@ magneticMPM is built with the [Taichi](https://www.taichi-lang.org/) programming
 ## Six armed gripper (Xu et al.)
 
 ![](https://github.com/joshDavy1/magneticMPM/blob/main/images/gripper.gif)
+
+# Install
+magneticMPM has been tested with Python 3.8 and Taichi 1.1.2. Anaconda is highly recommended.
+
+`conda create --name py38 python=3.8`
+`conda activate py38`
+
+`pip install taichi==1.1.2 numpy trimesh`
+
+
+
+
+
+
 
