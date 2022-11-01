@@ -16,7 +16,7 @@ gamma = 180 # Damping Constant
 offset = np.array([3e-3, 3e-3, 0.2e-3]) #Make sure robot is within grid
 dt = 7e-7
 # Initialise Variables
-print("Initialising Variables...")
+print("Initialising Variables... (this may take a while)")
 mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset)
 # Visualisation
 window = ti.ui.Window("Window", (1024, 1024))
