@@ -1,6 +1,4 @@
 # magneticMPM
-
-### Joshua Davy, Peter Lloyd, James H. Chandler and Pietro Valdastri
 ## Magnetic Beam Bending
 ![](https://github.com/joshDavy1/magneticMPM/blob/main/images/beam_bending.gif)
 
