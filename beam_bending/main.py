@@ -15,10 +15,10 @@ inv_dx = 1/dx
 #Material Parameters 
 flux_density = ti.Vector([0.143, 0.0])
 G = 303e3
-K = 20*G
+K = 500*G
 density = 5e3 * 1 # kgm-3
 
-dt = 6e-6
+dt = 1e-6
 g = 9.81
 
 # Offset of tentacle
@@ -104,7 +104,7 @@ def p2g():
         I1 = (f.transpose()@f).trace()
         inv_F_T = (f.inverse()).transpose()
         P_elastic = G*(J**(-2/3)) * (f - (I1/3)*inv_F_T) + K*J*(J-1)*inv_F_T
-        P_magnetic = -inv_mu0*applied_field[None]@flux_density.transpose()
+        P_magnetic = -inv_mu0*applied_field[None].outer_product(flux_density)
         P = P_elastic + P_magnetic
         affine = -4*inv_dx*inv_dx*dt*p_vol*P@f.transpose()  + p_mass*C[p]
         # Quadratic Interpolation
@@ -185,6 +185,7 @@ finish = gui.button("Finish")
 renderEvery = 100
 
 fields = np.array([20e-3, 5e-3, 7e-3, 10e-3, 15e-3, 25e-3, 40e-3])
+fields = np.array([10e-3])
 deflections = np.zeros_like(fields)
 settle_time = 1
 
@@ -214,4 +215,5 @@ for j in range(fields.shape[0]):
     deflections[j] = avg[None][1] - window_size/2
 
 y_axis = (deflections/length)
+print(y_axis)
 np.savetxt("mpm_data.csv", y_axis, delimiter=",")

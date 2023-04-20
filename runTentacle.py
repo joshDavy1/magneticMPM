@@ -3,10 +3,10 @@ import taichi as ti
 import numpy as np
 from sim.loadRobot import Robot
 ti.init(arch=ti.cuda, default_fp=ti.f32)
-from sim import mpm
+from sim.mpm_class import magneticMPM
 from colour_palette import tentacle_palette
 
-robotFile = "Tentacle/tentacleA.yaml"
+robotFile = "Tentacle/tentacleF.yaml"
 print("Generating Particles....")
 r = Robot(robotFile, ppm3=5e10, scale=1e-3)
 
@@ -17,8 +17,7 @@ gamma = 200 # Damping Constant
 offset = np.array([grid_size/2, grid_size/2, 30e-3])
 
 print("Initialising Variables.... (This may take a while)")
-mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset, colour_palette=tentacle_palette)
-
+mpm = magneticMPM(r, scale=1, grid_size=grid_size, dx=dx, g=g, gamma=gamma, offset=offset, colour_palette=tentacle_palette)
 
 window = ti.ui.Window("Window", (1024, 1024))
 canvas = window.get_canvas()

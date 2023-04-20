@@ -1,7 +1,7 @@
 import taichi as ti 
 ti.init(arch=ti.cuda, default_fp=ti.f32)
 import numpy as np
-from sim import mpm
+from sim.mpm_class import magneticMPM
 from sim.loadRobot import Robot
 from colour_palette import generic_palette
 
@@ -18,7 +18,7 @@ offset = np.array([grid_size/4, grid_size/4, 0.6e-3]) #Make sure robot is within
 dt = 7e-7
 # Initialise Variables
 print("Initialising Variables... (This may take a while)")
-mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset, colour_palette=generic_palette)
+mpm = magneticMPM(r, scale=1, grid_size=grid_size, dx=dx, g=g, gamma=gamma, offset=offset, colour_palette=generic_palette)
 # Visualisation
 window = ti.ui.Window("Window", (1024, 1024))
 canvas = window.get_canvas()
@@ -71,7 +71,6 @@ while window.running:
         with gui.sub_window("Rotate Field", 0.05, 0.1, 0.25, 0.2) as w:
             clicked =  w.button("Enable/Disable")
             angluar_velocity = w.slider_float("omega", angluar_velocity, 0, 100)
-            mpm.gamma =  w.slider_float("gamma", mpm.gamma, 1e5, 100e5)
             if clicked and rotate:
                 rotate = False
             elif clicked:

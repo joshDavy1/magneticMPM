@@ -20,7 +20,7 @@ class Robot:
         self.centers = []
         self.fixedSegments = []
         self.density = []
-        self.bulk_modulus = []
+        self.shear_modulus = []
 
 
         scaling_matrix = np.eye(4) * scale
@@ -35,7 +35,7 @@ class Robot:
             self.centers.append(self.meshes[i].center_mass)
             self.fixedSegments.append(self.robotDict["segments"][i]["fixed"])
             self.density.append(self.robotDict["segments"][i]["density"])
-            self.bulk_modulus.append(self.robotDict["segments"][i]["bulk_modulus"])
+            self.shear_modulus.append(self.robotDict["segments"][i]["shear_modulus"])
 
         self.particles = []
         self.n = 0

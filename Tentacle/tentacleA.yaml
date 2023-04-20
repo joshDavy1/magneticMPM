@@ -5,45 +5,45 @@ segments:
 - mesh: "assem - base-9.STL" #0
   magnetisation_vector: [0, 0, 0]
   density: 927
-  bulk_modulus: 67000
+  shear_modulus: 67000
   fixed: True
 - mesh: "assem - tll-1.STL" #1
   magnetisation_vector: [0, 0, 0]
   density: 927
-  bulk_modulus: 67000
+  shear_modulus: 67000
   fixed: False
 - mesh: "assem - base-2.STL" #2
   magnetisation_vector: [-0.08, 0, 1]
   density: 1882
-  bulk_modulus: 120000
+  shear_modulus: 120000
   fixed: False
 - mesh: "assem - base-3.STL" #3
   magnetisation_vector: [0, 0, 0]
   density: 927
-  bulk_modulus: 67000
+  shear_modulus: 67000
   fixed: False
 - mesh: "assem - base-5.STL" #4
   magnetisation_vector: [-0.93, 0, -0.38]
   density: 1882
-  bulk_modulus: 120000
+  shear_modulus: 120000
   fixed: False
 - mesh: "assem - base-4.STL" #5
   magnetisation_vector: [0, 0, 0]
   density: 927
-  bulk_modulus: 67000
+  shear_modulus: 67000
   fixed: False
 - mesh: "assem - base-6.STL" #6
   magnetisation_vector: [-0.3, 0, 0.95]
   density: 1882
-  bulk_modulus: 120000
+  shear_modulus: 120000
   fixed: False
 - mesh: "assem - base-7.STL" #7
   magnetisation_vector: [0, 0, 0]
   density: 927
-  bulk_modulus: 67000
+  shear_modulus: 67000
   fixed: False
 - mesh: "assem - base-8.STL" #8
   magnetisation_vector: [0.89, 0, 0.46]
   density: 1882
-  bulk_modulus: 120000
+  shear_modulus: 120000
   fixed: False

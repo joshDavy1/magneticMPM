@@ -1,7 +1,7 @@
 import taichi as ti 
 ti.init(arch=ti.cuda, default_fp=ti.f32)
 import numpy as np
-from sim import mpm
+from sim.mpm_class import magneticMPM
 from sim.loadRobot import Robot
 from colour_palette import generic_palette
 
@@ -18,7 +18,7 @@ offset = np.array([3e-3, 3e-3, 0.2e-3]) #Make sure robot is within grid
 dt = 7e-7
 # Initialise Variables
 print("Initialising Variables... (this may take a while)")
-mpm.init(r, scale=1, grid_size_=grid_size, dx_=dx, g_=g, gamma_=gamma, offset=offset, colour_palette=generic_palette)
+mpm = magneticMPM(r, scale=1, grid_size=grid_size, dx=dx, g=g, gamma=gamma, offset=offset, colour_palette=generic_palette)
 # Visualisation
 window = ti.ui.Window("Window", (1024, 1024))
 canvas = window.get_canvas()
