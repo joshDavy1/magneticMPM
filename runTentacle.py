@@ -6,7 +6,7 @@ ti.init(arch=ti.cuda, default_fp=ti.f32)
 from sim.mpm_class import magneticMPM
 from colour_palette import tentacle_palette
 
-robotFile = "Tentacle/tentacleF.yaml"
+robotFile = "Tentacle/tentacleA.yaml"
 print("Generating Particles....")
 r = Robot(robotFile, ppm3=5e10, scale=1e-3)
 
