@@ -1,6 +1,13 @@
 # magneticMPM
-## A Framework for Simulation of Magnetic Soft Robots using the Material Point Method (Under Review)
-Paper is currently under review but can be made avaliable on request.
+## A Framework for Simulation of Magnetic Soft Robots using the Material Point Method 
+Paper is avaliable on IEEE Xplore: [Link](https://ieeexplore.ieee.org/document/10103621)
+
+Please Cite:
+J. Davy, P. Lloyd, J. H. Chandler and P. Valdastri, "A Framework for Simulation of Magnetic Soft Robots using the Material Point Method," in IEEE Robotics and Automation Letters, doi: 10.1109/LRA.2023.3268016.
+
+[Bibtex](https://github.com/joshDavy1/magneticMPM/blob/main/davy.bib)
+
+
 ### Joshua Davy, Peter Lloyd, James H. Chandler and Pietro Valdastri
 
 
